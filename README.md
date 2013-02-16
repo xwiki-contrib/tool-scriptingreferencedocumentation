@@ -1,4 +1,4 @@
-Scripting referencei documentation Generation Tools
+Scripting reference documentation Generation Tools
 ===================================================
 
 Tool to generate the Scripting Reference Documentation
