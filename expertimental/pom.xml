@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+ *
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.xwiki.commons</groupId>
+    <artifactId>xwiki-commons-pom</artifactId>
+    <version>4.1-SNAPSHOT</version>
+  </parent>
+  <groupId>org.xwiki.commons</groupId>
+  <artifactId>xwiki-all</artifactId>
+  <version>4.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>XWiki All</name>
+  <description>XWiki All</description>
+  <modules>
+    <module>xwiki-commons</module>
+    <module>xwiki-rendering</module>
+    <module>xwiki-platform</module>
+    <module>xwiki-enterprise</module>
+  </modules>
+  <build>
+    <pluginManagement>
+      <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.8.1</version>
+        <configuration>
+          <!-- Default configuration for all reports -->
+          <detectLinks/>
+          <links>
+             <link>http://velocity.apache.org/tools/releases/1.4/javadoc/</link>
+             <link>http://docs.oracle.com/javaee/6/api/</link> 
+             <link>http://joda-time.sourceforge.net/api-release/</link>
+             <link>http://commons.apache.org/lang/api-3.1/</link>
+             <link>http://docs.atlassian.com/jira-rest-java-client/0.3.1/apidocs/</link>
+             <link>http://www.restlet.org/documentation/2.0/jse/api/</link>
+             <link>http://jackrabbit.apache.org/api/1.4/</link>
+          </links>
+        </configuration>
+        <executions>
+          <execution>
+            <id>aggregate</id>
+            <goals>
+              <goal>aggregate</goal>
+            </goals>
+            <phase>site</phase>
+            <configuration>
+              <!-- Specific configuration for the aggregate report -->
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
