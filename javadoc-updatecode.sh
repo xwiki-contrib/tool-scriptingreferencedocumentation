@@ -6,6 +6,7 @@ DIR=$3
 git clone git@github.com:xwiki/xwiki-platform.git 
 cd xwiki-platform
 git reset --hard HEAD
+git fetch --tags
 git checkout stable-${TAG}
 git checkout xwiki-platform-${TAG}
 git pull --rebase
@@ -15,6 +16,7 @@ mv MessageToolVelocityContextInitializer.java.new xwiki-platform/xwiki-platform-
 git clone git@github.com:xwiki/xwiki-commons.git 
 cd xwiki-commons
 git reset --hard HEAD
+git fetch --tags
 git checkout stable-${TAG}
 git checkout xwiki-commons-${TAG}
 git pull --rebase
@@ -22,6 +24,7 @@ cd ..
 git clone git@github.com:xwiki/xwiki-rendering.git 
 cd xwiki-rendering
 git reset --hard HEAD
+git fetch --tags
 git checkout stable-${TAG}
 git checkout xwiki-rendering-${TAG}
 git pull --rebase
@@ -29,6 +32,7 @@ cd ..
 git clone git@github.com:xwiki/xwiki-enterprise.git 
 cd xwiki-enterprise
 git reset --hard HEAD
+git fetch --tags
 git checkout stable-${TAG}
 git checkout xwiki-enterprise-${TAG}
 git pull --rebase
@@ -36,6 +40,7 @@ cd ..
 git clone git@github.com:xwiki/xwiki-manager.git 
 cd xwiki-manager
 git reset --hard HEAD
+git fetch --tags
 git checkout stable-${TAG}
 git checkout xwiki-manager-${TAG}
 git pull --rebase
